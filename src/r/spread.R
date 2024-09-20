@@ -1,10 +1,10 @@
-##‚Í‚¶‚ß‚É-----------------------------------------------------------------------------------------------------------
-###ì‹ÆƒfƒBƒŒƒNƒgƒŠ“™‚É‚Â‚¢‚Ä‚ÍAƒTƒ|[ƒgƒEƒFƒuƒTƒCƒg‚©‚çƒ_ƒEƒ“ƒ[ƒh‚Å‚«‚éu“¯«ˆ¤ŽÒ‚ÌŠ„‡v‚ÌRƒXƒNƒŠƒvƒg‚ðŽQÆ
+##ï¿½Í‚ï¿½ï¿½ß‚ï¿½-----------------------------------------------------------------------------------------------------------
+###ï¿½ï¿½Æƒfï¿½Bï¿½ï¿½ï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½É‚Â‚ï¿½ï¿½Ä‚ÍAï¿½Tï¿½|ï¿½[ï¿½gï¿½Eï¿½Fï¿½uï¿½Tï¿½Cï¿½gï¿½ï¿½ï¿½ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½Å‚ï¿½ï¿½ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò‚ÌŠï¿½ï¿½ï¿½ï¿½vï¿½ï¿½Rï¿½Xï¿½Nï¿½ï¿½ï¿½vï¿½gï¿½ï¿½ï¿½Qï¿½ï¿½
 
-#ƒo[ƒWƒ‡ƒ“‚ÌŠm”Fi4.4.0‚Å“®ìŠm”FÏj
+#ï¿½oï¿½[ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ÌŠmï¿½Fï¿½i4.4.0ï¿½Å“ï¿½ï¿½ï¿½mï¿½Fï¿½Ïj
 R.version
 
-##Ž–‘O€”õiŽg—p‚·‚éƒpƒbƒP[ƒW‚ÌŒÄ‚Ño‚µj---------------------------------------------------------------------------
+##ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½iï¿½gï¿½pï¿½ï¿½ï¿½ï¿½pï¿½bï¿½Pï¿½[ï¿½Wï¿½ÌŒÄ‚Ñoï¿½ï¿½ï¿½j---------------------------------------------------------------------------
 packages <- c(
   "ggplot2", 
   "urca",
@@ -18,71 +18,71 @@ for (package in packages) {
   }
 }
 
-##ƒf[ƒ^‚Ì“Ç‚Ýž‚Ý----------------------------------------------------------------------------------------------------
-#rData1‚Écsvƒtƒ@ƒCƒ‹‚Ì“à—e‚ðŠi”[Bheader=TRUE‚Å‚Ps–Ú‚ðƒwƒbƒ_[‚Æ‚·‚é
+##ï¿½fï¿½[ï¿½^ï¿½Ì“Ç‚Ýï¿½ï¿½ï¿½----------------------------------------------------------------------------------------------------
+#rData1ï¿½ï¿½csvï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Ì“ï¿½ï¿½eï¿½ï¿½ï¿½iï¿½[ï¿½Bheader=TRUEï¿½Å‚Pï¿½sï¿½Ú‚ï¿½ï¿½wï¿½bï¿½_ï¿½[ï¿½Æ‚ï¿½ï¿½ï¿½
 rData <- read.csv(
   "https://www.fbc.keio.ac.jp/~tyabu/keiryo/spread_data.csv",
   header=TRUE
 )
 head(rData)
 
-##ƒf[ƒ^‚Ì’è‹`‚ÆŠm”F---------------------------------------------------------------------------------------------------------
-##ƒf[ƒ^ƒZƒbƒg‚Ì‰ÁH
+##ï¿½fï¿½[ï¿½^ï¿½Ì’ï¿½`ï¿½ÆŠmï¿½F---------------------------------------------------------------------------------------------------------
+##ï¿½fï¿½[ï¿½^ï¿½Zï¿½bï¿½gï¿½Ì‰ï¿½ï¿½H
 r_short <- rData[,1]
 r_long <- rData[,2]
-spread <- r_long - r_short@#•Ï”spreadi‹à—˜ƒXƒvƒŒƒbƒhj‚ð’è‹`
-dspread <- c(NA, diff(spread))@#•Ï”dspreadi‘O”N“x‚Æ‚Ì‹à—˜ƒXƒvƒŒƒbƒh·•ªj‚ð’è‹`
-rData$time <- seq(as.Date("1980-01-01"), by="quarter", length.out=152) #ƒf[ƒ^ƒZƒbƒg‚Étime—ñ‚ð’Ç‰Á
+spread <- r_long - r_shortï¿½@#ï¿½Ïï¿½spreadï¿½iï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½vï¿½ï¿½ï¿½bï¿½hï¿½jï¿½ï¿½ï¿½`
+dspread <- c(NA, diff(spread))ï¿½@#ï¿½Ïï¿½dspreadï¿½iï¿½Oï¿½Nï¿½xï¿½Æ‚Ì‹ï¿½ï¿½ï¿½ï¿½Xï¿½vï¿½ï¿½ï¿½bï¿½hï¿½ï¿½ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½`
+rData$time <- seq(as.Date("1980-01-01"), by="quarter", length.out=152) #ï¿½fï¿½[ï¿½^ï¿½Zï¿½bï¿½gï¿½ï¿½timeï¿½ï¿½ï¿½Ç‰ï¿½
 rData$spread <- spread
 rData$dspread <- dspread
 rData$l.spread <- spread-dspread
 
-rData <- rData[,c("time","r_short","r_long","spread","dspread","l.spread")]@#ƒf[ƒ^ƒZƒbƒg‚ÌÄ®Œ`
-head(rData, n=10)#nk‚Åã‚©‚çk”Ô–Ú‚Ü‚Å•\Ž¦Aƒf[ƒ^‚ª³‚µ‚­’è‹`‚Å‚«‚½‚©Šm”F
+rData <- rData[,c("time","r_short","r_long","spread","dspread","l.spread")]ï¿½@#ï¿½fï¿½[ï¿½^ï¿½Zï¿½bï¿½gï¿½ÌÄï¿½ï¿½`
+head(rData, n=10)#nï¿½ï¿½kï¿½Åã‚©ï¿½ï¿½kï¿½Ô–Ú‚Ü‚Å•\ï¿½ï¿½ï¿½Aï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½`ï¿½Å‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½F
 
 
-##15.2.2ß‚Ì„’è-------------------------------------------------------------------------------------------------
+##15.2.2ï¿½ß‚Ìï¿½ï¿½ï¿½-------------------------------------------------------------------------------------------------
 
-# ’·Šú‹à—˜‚Æ’ZŠú‹à—˜‚ÌÜ‚êüƒOƒ‰ƒt‚ð•`‰æ
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ’Zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌÜ‚ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½tï¿½ï¿½`ï¿½ï¿½
 ggplot(rData, aes(x = time)) +
-  geom_line(aes(y = r_long), color = "blue") +  # r_long‚ÌÜ‚êüƒOƒ‰ƒtiÂFj
-  geom_line(aes(y = r_short), color = "red") +  # r_short‚ÌÜ‚êüƒOƒ‰ƒtiÔFj
-  labs(x = "”N", y = "%") + # xŽ²‚ÆyŽ²‚Ìƒ‰ƒxƒ‹‚ðÝ’è
-  theme_minimal() # ƒOƒ‰ƒt‚ÌŒ©‚½–Ú‚ðƒVƒ“ƒvƒ‹‚É‚·‚é
+  geom_line(aes(y = r_long), color = "blue") +  # r_longï¿½ÌÜ‚ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½tï¿½iï¿½ÂFï¿½j
+  geom_line(aes(y = r_short), color = "red") +  # r_shortï¿½ÌÜ‚ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½tï¿½iï¿½ÔFï¿½j
+  labs(x = "ï¿½N", y = "%") + # xï¿½ï¿½ï¿½ï¿½yï¿½ï¿½ï¿½Ìƒï¿½ï¿½xï¿½ï¿½ï¿½ï¿½Ý’ï¿½
+  theme_minimal() # ï¿½Oï¿½ï¿½ï¿½tï¿½ÌŒï¿½ï¿½ï¿½ï¿½Ú‚ï¿½ï¿½Vï¿½ï¿½ï¿½vï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½
 
-# ‹à—˜ƒXƒvƒŒƒbƒh‚ÌÜ‚êüƒOƒ‰ƒt‚ð•`‰æ
+# ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½vï¿½ï¿½ï¿½bï¿½hï¿½ÌÜ‚ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½tï¿½ï¿½`ï¿½ï¿½
 ggplot(rData, aes(x = time)) +
-  geom_line(aes(y = spread), color = "green") +  # spread‚ÌÜ‚êüƒOƒ‰ƒti—ÎFj
-  labs(x = "”N", y = "%") +  # xŽ²‚ÆyŽ²‚Ìƒ‰ƒxƒ‹‚ðÝ’è
-  theme_minimal()  # ƒOƒ‰ƒt‚ÌŒ`ó‚ðƒVƒ“ƒvƒ‹‚É‚·‚é
+  geom_line(aes(y = spread), color = "green") +  # spreadï¿½ÌÜ‚ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½tï¿½iï¿½ÎFï¿½j
+  labs(x = "ï¿½N", y = "%") +  # xï¿½ï¿½ï¿½ï¿½yï¿½ï¿½ï¿½Ìƒï¿½ï¿½xï¿½ï¿½ï¿½ï¿½Ý’ï¿½
+  theme_minimal()  # ï¿½Oï¿½ï¿½ï¿½tï¿½ÌŒ`ï¿½ï¿½ï¿½ï¿½Vï¿½ï¿½ï¿½vï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½
 
-model <- lm(spread ~ l.spread, data = rData)@# ƒf[ƒ^‚ð€”õ‚µ‚ÄüŒ`‰ñ‹Aƒ‚ƒfƒ‹‚ð„’è‚·‚é
-summary(model)@# ‰ñ‹Aƒ‚ƒfƒ‹‚Ì—v–ñ‚ð•\Ž¦‚·‚é
+model <- lm(spread ~ l.spread, data = rData)ï¿½@# ï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½`ï¿½ï¿½Aï¿½ï¿½ï¿½fï¿½ï¿½ï¿½ð„’è‚·ï¿½ï¿½
+summary(model)ï¿½@# ï¿½ï¿½Aï¿½ï¿½ï¿½fï¿½ï¿½ï¿½Ì—vï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
-##16,2,4ß‚Ì„’è------------------------------------------------------------------------------------
-adf_test_1 <- ur.df(rData$spread, type = "drift", lags = 0)@# ’è”€‚Ì‚Ý‚ðl—¶‚µ‚½’PˆÊªŒŸ’è‚ðŽÀsBStata”Å‚Æ•\Ž¦‚ªˆÙ‚È‚é‚ªT’l‚Í“™‚µ‚¢B
+##16,2,4ï¿½ß‚Ìï¿½ï¿½ï¿½------------------------------------------------------------------------------------
+adf_test_1 <- ur.df(rData$spread, type = "drift", lags = 0)ï¿½@# ï¿½è”ï¿½ï¿½ï¿½Ì‚Ý‚ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Pï¿½Êï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½BStataï¿½Å‚Æ•\ï¿½ï¿½ï¿½ï¿½ï¿½Ù‚È‚é‚ªTï¿½lï¿½Í“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
 summary(adf_test_1)
-adf_test_2 <- ur.df(rData$spread, type = "trend", lags = 0)@#/*ƒgƒŒƒ“ƒh‚ð“ü‚ê‚½ƒP[ƒX*/
-summary(adf_test_2)@@@@@@@@@@@@@@@@@@@@@# ’è”€‚ÆŒX‚«‚ðl—¶‚µ‚½’PˆÊªŒŸ’è‚ðŽÀsBStata”Å‚Æ•\Ž¦‚ªˆÙ‚È‚é‚ªT’l‚Í“™‚µ‚¢B
+adf_test_2 <- ur.df(rData$spread, type = "trend", lags = 0)ï¿½@#/*ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Pï¿½[ï¿½X*/
+summary(adf_test_2)ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@# ï¿½è”ï¿½ï¿½ï¿½ÆŒXï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Pï¿½Êï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½BStataï¿½Å‚Æ•\ï¿½ï¿½ï¿½ï¿½ï¿½Ù‚È‚é‚ªTï¿½lï¿½Í“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
 
-#ADFŒŸ’è‚Åƒ‰ƒO‚ð‘I‘ð‚µ‚½‚¢‚È‚çAˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ÅAIC‚âBIC‚ðŒvŽZ‚Å‚«‚éB
+#ADFï¿½ï¿½ï¿½ï¿½Åƒï¿½ï¿½Oï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½Aï¿½È‰ï¿½ï¿½ÌƒRï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½AICï¿½ï¿½BICï¿½ï¿½ï¿½vï¿½Zï¿½Å‚ï¿½ï¿½ï¿½B
 lag_selection <- VARselect(diff(rData$spread), lag.max=10, type="const")
 print(lag_selection)
 
-##DF-GLSŒŸ’è---------------------------------------------------------------------------------
-#Œ»óR‚Å‚Å‚«‚éDF-GLSŒŸ’è‚ðÌ—p
-#—ÕŠE’l‚Í‹ß‚¢’l‚ð‚Æ‚é
+##DF-GLSï¿½ï¿½ï¿½ï¿½---------------------------------------------------------------------------------
+#ï¿½ï¿½ï¿½ï¿½Rï¿½Å‚Å‚ï¿½ï¿½ï¿½DF-GLSï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì—p
+#ï¿½ÕŠEï¿½lï¿½Í‹ß‚ï¿½ï¿½lï¿½ï¿½ï¿½Æ‚ï¿½
 adf_test_notrend <- ur.ers(rData$spread, type = "DF-GLS", model = "constant", lag.max = 10)
-summary(adf_test_notrend)@#’è”€‚ ‚èƒgƒŒƒ“ƒh–³‚µ‚ÌDF-GLSŒŸ’è
+summary(adf_test_notrend)ï¿½@#ï¿½è”ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DF-GLSï¿½ï¿½ï¿½ï¿½
 adf_test_withtrend <- ur.ers(rData$spread, type = "DF-GLS", model = "trend", lag.max = 10)
-summary(adf_test_withtrend)@#’è”€‚ ‚èƒgƒŒƒ“ƒh‚ ‚è‚ÌDF-GLSŒŸ’è
+summary(adf_test_withtrend)ï¿½@#ï¿½è”ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½DF-GLSï¿½ï¿½ï¿½ï¿½
 
 
-##DF-GLSŒŸ’è‚Ì—ûK–â‘è--------------------------------------------------------------------
-#Œ»óR‚Å‚Å‚«‚éDF-GLSŒŸ’è‚ðÌ—p
-#—ÕŠE’l‚Í‹ß‚¢’l‚ð‚Æ‚é
+##DF-GLSï¿½ï¿½ï¿½ï¿½Ì—ï¿½ï¿½Kï¿½ï¿½ï¿½--------------------------------------------------------------------
+#ï¿½ï¿½ï¿½ï¿½Rï¿½Å‚Å‚ï¿½ï¿½ï¿½DF-GLSï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì—p
+#ï¿½ÕŠEï¿½lï¿½Í‹ß‚ï¿½ï¿½lï¿½ï¿½ï¿½Æ‚ï¿½
 adf_test_r_long <- ur.ers(rData$r_long, type = "DF-GLS", model = "trend", lag.max = 10)
-summary(adf_test_r_long)@#’·Šú‹à—˜‚ÌDF-GLSŒŸ’è 
+summary(adf_test_r_long)ï¿½@#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DF-GLSï¿½ï¿½ï¿½ï¿½
 adf_test_r_short <- ur.ers(rData$r_short, type = "DF-GLS", model = "trend", lag.max = 10)
-summary(adf_test_r_short)@#’ZŠú‹à—˜‚ÌDF-GLSŒŸ’è
+summary(adf_test_r_short)ï¿½@#ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½DF-GLSï¿½ï¿½ï¿½ï¿½
