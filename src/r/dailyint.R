@@ -39,12 +39,12 @@ summary(Out1)
 
 fs1 <- Fstats(ds~intj, data = Dat, from = 0.15, to = 0.85)
 fs <- fs1$Fstats
-Dat2 <- Dat[(459:2596),]　#両端15％をカット
+Dat2 <- Dat[(459:2596),] #両端15％をカット
 Dat3 <- cbind(Dat2,fs)
 Dat3[,1] <- as.Date(Dat3[,1],"%m/%d/%Y")
 Dat3
 plot(Dat3$date,Dat3$fs,type="l") #wald統計量の推移
-max(Dat3$fs) 
+max(Dat3$fs) #最大値を求める
   ##33.899と計算されるが制約数が２であるため、２で除すと16.945となり教科書と一致
 Dat3[Dat3$fs >= 33.8,] #構造変化点
 
