@@ -5,7 +5,6 @@ R.version
 
 # 使用するパッケージの呼び出し ---------------------------------------------------------------------------
 packages <- c(
-  "languageserver",
   "lubridate",
   "dplyr",
   "sandwich",
@@ -26,7 +25,8 @@ for (package in packages) {
 
 # データの準備 ---------------------------------------------------------------------------
 # データの読み込み
-df <- read.csv("oil_data.csv", header = TRUE)
+url <- "https://www.fbc.keio.ac.jp/~tyabu/keiryo/oil_data.csv"
+df <- read.csv(url, header = TRUE)
 head(df)
 
 # 月次データ(1987M6-2017M12)の生成
